@@ -1,0 +1,47 @@
+.circle1 {
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    background: conic-gradient(violet, indigo, blue, green, yellow, orange, red, violet);
+    animation: rotate-rainbow 2s linear infinite;
+    /* animation: rotate-rainbow 10s linear infinite; */
+}
+
+@keyframes rotate-rainbow {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.circle1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500%;
+    height: 500%;
+    background: conic-gradient(violet, indigo, blue, green, yellow, orange, red, violet);
+    animation: rainbow 10s linear infinite;
+}
+
+@keyframes rainbow {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.circle2{
+    height: 300px;
+    width: 300px;
+    background:conic-gradient(violet, indigo, blue, green, yellow, orange, red, violet);
+    margin-top: 10px;
+    border-radius: 50%;
+    animation: rotate-rainbow 2s linear infinite;
+}
